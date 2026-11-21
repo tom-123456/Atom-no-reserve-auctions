@@ -3,87 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>No Reserve Domain Auction | Fruit Muffins, Coffee Herbs, ReelMy & More</title>
-<meta name="description" content="No reserve domain auction on ATOM. Bid on FruitMuffins.com, CoffeeHerbs.com, ReelMy.com, FancyPlugin.com and InnMoon.com. Highest bid wins.">
+<title>ATOM Auction | No Reserve Domain Names</title>
+<meta name="description" content="ATOM no reserve auction. Bid on FruitMuffins.com, CoffeeHerbs.com, ReelMy.com, FancyPlugin.com and InnMoon.com.">
 <style>
-:root{
-  --bg:#0b1b3a;--bg2:#10285a;--card:#ffffff;--ink:#0b1b3a;--muted:#5b6785;
-  --gold:#ffb100;--gold2:#ff8a00;--red:#e5383b;--green:#12a150;--line:#e6eaf3;
-}
+:root{--blue:#1556d6;--blue2:#0b3aa8;--navy:#0a2a6b;--soft:#eef3ff;--ink:#0f1c3f;--muted:#5a6784;--line:#dfe6f5;--red:#d62839;--gold:#b8860b;--goldl:#f5c542}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-  background:linear-gradient(180deg,var(--bg) 0,var(--bg2) 380px,#f3f6fc 380px);
-  color:var(--ink);line-height:1.5;min-height:100vh;
-  padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.5;padding-bottom:env(safe-area-inset-bottom,0px)}
 a{text-decoration:none;color:inherit}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px)}
+.nav{max-width:980px;margin:auto;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
+.brand{font-weight:800;font-size:15px;display:flex;align-items:center;gap:8px}
+.brand i{width:22px;height:22px;border-radius:6px;background:var(--blue);color:#fff;display:grid;place-items:center;font-style:normal;font-size:13px}
+.tag{background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+.hero{max-width:980px;margin:auto;text-align:center;padding:40px 18px 24px}
+.hero h1{font-size:clamp(28px,6vw,44px);line-height:1.15;font-weight:800;letter-spacing:-.5px}
+.hero h1 span{color:var(--blue)}
+.hero p{color:var(--muted);margin:12px auto 0;max-width:560px;font-size:clamp(15px,2.5vw,17px)}
+.trust{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.trust b{font-size:13px;font-weight:600;color:var(--blue2);background:var(--soft);border:1px solid #cfdcfb;padding:6px 12px;border-radius:999px}
+main{max-width:980px;margin:auto;padding:0 16px 36px}
+.list{display:flex;flex-direction:column;gap:18px}
 
-/* Header: slim */
-header{background:rgba(11,27,58,.96);border-bottom:1px solid rgba(255,255,255,.08);
-  position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px)}
-.nav{max-width:1000px;margin:auto;height:52px;display:flex;align-items:center;
-  justify-content:space-between;padding:0 18px}
-.brand{color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px}
-.brand i{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--gold),var(--gold2));
-  display:grid;place-items:center;color:var(--bg);font-style:normal;font-size:13px;font-weight:800}
-.tag{color:#ffd978;font-size:12px;font-weight:600;border:1px solid rgba(255,177,0,.45);
-  padding:4px 10px;border-radius:999px}
-
-/* Hero */
-.hero{max-width:1000px;margin:auto;text-align:center;color:#fff;padding:44px 18px 34px}
-.hero h1{font-size:clamp(28px,6vw,46px);line-height:1.15;font-weight:800;letter-spacing:-.5px}
-.hero h1 span{color:var(--gold)}
-.hero p{color:#c6d2ee;margin:12px auto 0;max-width:560px;font-size:clamp(15px,2.5vw,17px)}
-.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
-.pills b{font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px}
-
-/* Listings */
-main{max-width:1000px;margin:auto;padding:0 16px 40px}
-.list{display:flex;flex-direction:column;gap:14px}
-.item{background:var(--card);border-radius:16px;padding:16px 18px;display:flex;align-items:center;
-  gap:16px;box-shadow:0 10px 30px rgba(11,27,58,.14);border:1px solid var(--line);
-  border-left:5px solid var(--gold);transition:transform .2s,box-shadow .2s}
-.item:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(11,27,58,.2)}
-.logo{flex:0 0 52px;height:52px;border-radius:14px;display:grid;place-items:center}
+.card{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 10px 30px rgba(10,42,107,.12);transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 38px rgba(10,42,107,.22);transform:translateY(-2px)}
+.band{display:flex;align-items:center;gap:14px;padding:16px 18px;color:#fff;border-bottom:3px solid var(--goldl);
+  background:linear-gradient(120deg,var(--navy),var(--blue))}
+.logo{flex:0 0 52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 2px var(--goldl)}
 .logo svg{width:30px;height:30px}
-.info{flex:1;min-width:0}
-.name{font-size:clamp(19px,3.6vw,26px);font-weight:800;letter-spacing:-.3px;word-break:break-word}
-.name small{font-weight:600;color:var(--muted)}
-.line{color:var(--muted);font-size:14px;margin-top:2px}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;align-items:center}
-.chip{font-size:12px;font-weight:700;padding:4px 9px;border-radius:8px;background:#f1f4fb;color:var(--ink)}
-.chip.end{background:#ffe9e9;color:var(--red)}
-.chip.nr{background:#e4f6ec;color:var(--green)}
-.buy{text-align:right;flex:0 0 auto}
-.price{font-size:12px;color:var(--muted);font-weight:600}
-.price strong{display:block;font-size:24px;color:var(--ink);font-weight:800;line-height:1.1}
-.btn{display:inline-block;margin-top:8px;background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:#1a1200;font-weight:800;font-size:15px;padding:12px 24px;border-radius:12px;
-  box-shadow:0 6px 16px rgba(255,138,0,.38);transition:transform .15s,filter .15s;white-space:nowrap}
-.btn:hover{transform:scale(1.04);filter:brightness(1.06)}
-.btn:focus-visible{outline:3px solid var(--bg);outline-offset:2px}
-
-/* How it works + footer */
-.how{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.how div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
-.how h3{font-size:15px;margin-bottom:4px}
-.how p{font-size:13.5px;color:var(--muted)}
-.cta{margin-top:26px;background:linear-gradient(135deg,var(--bg),var(--bg2));color:#fff;
-  border-radius:18px;text-align:center;padding:28px 18px}
+.title{flex:1;min-width:0}
+.title h2{font-size:clamp(20px,4vw,28px);font-weight:800;letter-spacing:-.3px;word-break:break-word}
+.title p{font-size:14px;color:#cddbff;margin-top:1px}
+.end,.open{flex:0 0 auto;font-size:12px;font-weight:800;padding:6px 11px;border-radius:999px;white-space:nowrap}
+.end{background:var(--red);color:#fff}
+.open{background:#fff;color:var(--blue2)}
+.body{padding:16px 18px 18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stats div{background:var(--soft);border-radius:12px;padding:10px 12px}
+.stats small{display:block;font-size:11.5px;color:var(--muted);font-weight:600}
+.stats b{display:block;font-size:22px;font-weight:800;color:var(--ink);line-height:1.25}
+.stats b.hl{color:var(--blue2)}
+.stats b.gold{color:var(--gold)}
+.stats b.sm{font-size:15px;padding-top:4px}
+.act{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;flex-wrap:wrap}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-size:12px;font-weight:700;color:var(--blue2);background:#fff;border:1px solid #cfdcfb;padding:4px 10px;border-radius:8px}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:800;font-size:16px;padding:13px 34px;border-radius:12px;box-shadow:0 6px 16px rgba(21,86,214,.35);transition:transform .15s,filter .15s;white-space:nowrap;text-align:center}
+.btn:hover{transform:scale(1.04);filter:brightness(1.1)}
+.btn:focus-visible{outline:3px solid #9db9f7;outline-offset:2px}
+.note{text-align:center;color:var(--muted);font-size:12.5px;margin-top:16px}
+.why{margin-top:32px}
+.why h2{text-align:center;font-size:clamp(20px,4vw,26px);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid div{background:var(--soft);border:1px solid #d5e0fb;border-radius:14px;padding:16px;text-align:center}
+.grid h3{font-size:15px;color:var(--blue2);margin-bottom:4px}
+.grid p{font-size:13.5px;color:var(--muted)}
+.cta{margin-top:26px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:18px;text-align:center;padding:28px 18px;border-bottom:4px solid var(--goldl)}
 .cta h2{font-size:clamp(20px,4vw,26px)}
-.cta p{color:#c6d2ee;margin:6px 0 4px}
+.cta p{opacity:.92;margin:6px 0 12px}
+.cta .btn{background:#fff;color:var(--blue2);box-shadow:0 6px 16px rgba(0,0,0,.25)}
 footer{text-align:center;color:var(--muted);font-size:12.5px;padding:8px 16px 26px}
-
-/* Responsive */
-@media(max-width:700px){
-  .item{flex-wrap:wrap;padding:14px}
-  .buy{width:100%;display:flex;align-items:center;justify-content:space-between;
-    border-top:1px dashed var(--line);padding-top:12px;text-align:left}
-  .btn{margin-top:0}
-  .how{grid-template-columns:1fr}
+@media(max-width:760px){
+  .stats{grid-template-columns:1fr 1fr}
+  .band{flex-wrap:wrap}
+  .end,.open{order:3}
+  .act{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+  .grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:380px){.logo{flex-basis:44px;height:44px}.btn{padding:11px 18px}}
+@media(max-width:400px){.logo{flex-basis:44px;height:44px}.stats b{font-size:19px}.grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -91,116 +79,156 @@ footer{text-align:center;color:var(--muted);font-size:12.5px;padding:8px 16px 26
 
 <header>
   <div class="nav">
-    <a class="brand" href="#"><i>D</i>Domain Auction</a>
+    <a class="brand" href="#"><i>A</i>ATOM Auction</a>
     <span class="tag">No Reserve</span>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Premium Domains. <span>No Reserve.</span><br>Highest Bid Wins.</h1>
-  <p>Five brandable .com names are live on ATOM. No minimum price, so every bid has a real chance to win.</p>
-  <div class="pills"><b>No Reserve Auction</b><b>Instant Transfer</b><b>Secure Checkout on ATOM</b></div>
+  <h1>ATOM Auction <span>No Reserve</span></h1>
+  <p>Five brandable .com domain names. No minimum price. The highest bid wins.</p>
+  <div class="trust"><b>No Reserve</b><b>.com Extension</b><b>Fast Transfer</b><b>Secure Checkout on ATOM</b></div>
 </section>
 
 <main>
   <div class="list">
 
-    <!-- 1 -->
-    <article class="item">
-      <div class="logo" style="background:#fff1e0">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M5 15c0-6 5-10 11-10s11 4 11 10H5z" fill="#ff8a00"/><path d="M7 15h18l-2 11H9L7 15z" fill="#ffb100"/><path d="M12 15v11M16 15v11M20 15v11" stroke="#c75f00" stroke-width="1.5"/><circle cx="12" cy="10" r="1.3" fill="#fff"/><circle cx="19" cy="9" r="1.3" fill="#fff"/></svg>
+    <article class="card">
+      <div class="band">
+        <div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M5 15c0-6 5-10 11-10s11 4 11 10H5z" fill="#1556d6"/><path d="M7 15h18l-2 11H9L7 15z" fill="#6f9bff"/><path d="M12 15v11M16 15v11M20 15v11" stroke="#0b3aa8" stroke-width="1.5"/><circle cx="12" cy="10" r="1.3" fill="#fff"/><circle cx="19" cy="9" r="1.3" fill="#fff"/></svg></div>
+        <div class="title">
+          <h2>FruitMuffins.com</h2>
+          <p>Fresh bakes, instant brand.</p>
+        </div>
+        <span class="end">Ends Tomorrow</span>
       </div>
-      <div class="info">
-        <h2 class="name">Fruit<span>Muffins</span>.com</h2>
-        <p class="line">Fresh bakes, instant brand.</p>
-        <div class="meta"><span class="chip end">Ends Tomorrow</span><span class="chip">⏱ 2d 2h</span><span class="chip nr">No Reserve</span></div>
-      </div>
-      <div class="buy">
-        <div class="price">Current Bid<strong>$95</strong></div>
-        <a class="btn" href="https://www.atom.com/domain-auctions/fruitmuffins.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
-      </div>
-    </article>
-
-    <!-- 2 -->
-    <article class="item">
-      <div class="logo" style="background:#efe6df">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M6 12h16v8a6 6 0 01-6 6h-4a6 6 0 01-6-6v-8z" fill="#6f4e37"/><path d="M22 14h3a3 3 0 010 6h-3" stroke="#6f4e37" stroke-width="2"/><path d="M14 4c-2 2 2 3 0 5M18 4c-2 2 2 3 0 5" stroke="#12a150" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </div>
-      <div class="info">
-        <h2 class="name">Coffee<span>Herbs</span>.com</h2>
-        <p class="line">Where every cup turns herbal.</p>
-        <div class="meta"><span class="chip end">Ends Tomorrow</span><span class="chip">⏱ 2d 2h</span><span class="chip nr">No Reserve</span></div>
-      </div>
-      <div class="buy">
-        <div class="price">Current Bid<strong>$85</strong></div>
-        <a class="btn" href="https://www.atom.com/domain-auctions/coffeeherbs.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+      <div class="body">
+        <div class="stats">
+          <div><small>Current Bid</small><b class="hl">$110</b></div>
+          <div><small>ATOM AI Appraisal</small><b class="gold">$2,699</b></div>
+          <div><small>Total Bids</small><b>20</b></div>
+          <div><small>Auction Ends</small><b class="sm">Tomorrow, 1:00 PM</b></div>
+        </div>
+        <div class="act">
+          <div class="tags"><span>No Reserve</span><span>.com</span><span>Instant ATOM Transfer</span></div>
+          <a class="btn" href="https://www.atom.com/domain-auctions/fruitmuffins.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+        </div>
       </div>
     </article>
 
-    <!-- 3 -->
-    <article class="item">
-      <div class="logo" style="background:#ffe9ee">
-        <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="9" width="17" height="14" rx="3" fill="#e5383b"/><path d="M21 14l7-4v12l-7-4v-4z" fill="#ff6b6b"/><path d="M11 13.5v5l4.5-2.5-4.5-2.5z" fill="#fff"/></svg>
+    <article class="card">
+      <div class="band">
+        <div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M6 12h16v8a6 6 0 01-6 6h-4a6 6 0 01-6-6v-8z" fill="#1556d6"/><path d="M22 14h3a3 3 0 010 6h-3" stroke="#1556d6" stroke-width="2"/><path d="M14 4c-2 2 2 3 0 5M18 4c-2 2 2 3 0 5" stroke="#0f9d58" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="title">
+          <h2>CoffeeHerbs.com</h2>
+          <p>Where every cup turns herbal.</p>
+        </div>
+        <span class="end">Ends Tomorrow</span>
       </div>
-      <div class="info">
-        <h2 class="name">Reel<span>My</span>.com</h2>
-        <p class="line">Short. Snappy. Made for video.</p>
-        <div class="meta"><span class="chip end">Ends Tomorrow</span><span class="chip">⏱ 2d 2h</span><span class="chip nr">No Reserve</span></div>
-      </div>
-      <div class="buy">
-        <div class="price">Current Bid<strong>$20</strong></div>
-        <a class="btn" href="https://www.atom.com/domain-auctions/ReelMy.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
-      </div>
-    </article>
-
-    <!-- 4 -->
-    <article class="item">
-      <div class="logo" style="background:#e8edff">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M13 5v6M19 5v6" stroke="#3b5bdb" stroke-width="2.4" stroke-linecap="round"/><rect x="8" y="11" width="16" height="9" rx="3" fill="#3b5bdb"/><path d="M16 20v4a3 3 0 003 3h2" stroke="#3b5bdb" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="8" r="1.5" fill="#ffb100"/></svg>
-      </div>
-      <div class="info">
-        <h2 class="name">Fancy<span>Plugin</span>.com</h2>
-        <p class="line">Plug in style. Launch in seconds.</p>
-        <div class="meta"><span class="chip">⏱ 4d 2h</span><span class="chip nr">No Reserve</span></div>
-      </div>
-      <div class="buy">
-        <div class="price">Current Bid<strong>$10</strong></div>
-        <a class="btn" href="https://www.atom.com/domain-auctions/fancyplugin.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+      <div class="body">
+        <div class="stats">
+          <div><small>Current Bid</small><b class="hl">$85</b></div>
+          <div><small>ATOM AI Appraisal</small><b class="gold">$4,199</b></div>
+          <div><small>Total Bids</small><b>14</b></div>
+          <div><small>Auction Ends</small><b class="sm">Tomorrow, 1:00 PM</b></div>
+        </div>
+        <div class="act">
+          <div class="tags"><span>No Reserve</span><span>.com</span><span>Instant ATOM Transfer</span></div>
+          <a class="btn" href="https://www.atom.com/domain-auctions/coffeeherbs.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+        </div>
       </div>
     </article>
 
-    <!-- 5 -->
-    <article class="item">
-      <div class="logo" style="background:#eceaff">
-        <svg viewBox="0 0 32 32" fill="none"><path d="M20 5a11 11 0 100 22 9 9 0 01-9-11 9 9 0 019-11z" fill="#6c5ce7"/><circle cx="25" cy="8" r="1.4" fill="#ffb100"/><circle cx="27" cy="15" r="1" fill="#ffb100"/></svg>
+    <article class="card">
+      <div class="band">
+        <div class="logo"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="9" width="17" height="14" rx="3" fill="#1556d6"/><path d="M21 14l7-4v12l-7-4v-4z" fill="#6f9bff"/><path d="M11 13.5v5l4.5-2.5-4.5-2.5z" fill="#fff"/></svg></div>
+        <div class="title">
+          <h2>ReelMy.com</h2>
+          <p>Short. Snappy. Made for video.</p>
+        </div>
+        <span class="end">Ends Tomorrow</span>
       </div>
-      <div class="info">
-        <h2 class="name">Inn<span>Moon</span>.com</h2>
-        <p class="line">A stay worth dreaming about.</p>
-        <div class="meta"><span class="chip">⏱ 4d 2h</span><span class="chip nr">No Reserve</span></div>
+      <div class="body">
+        <div class="stats">
+          <div><small>Current Bid</small><b class="hl">$65</b></div>
+          <div><small>ATOM AI Appraisal</small><b class="gold">$2,799</b></div>
+          <div><small>Total Bids</small><b>12</b></div>
+          <div><small>Auction Ends</small><b class="sm">Tomorrow, 1:00 PM</b></div>
+        </div>
+        <div class="act">
+          <div class="tags"><span>No Reserve</span><span>.com</span><span>Instant ATOM Transfer</span></div>
+          <a class="btn" href="https://www.atom.com/domain-auctions/ReelMy.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+        </div>
       </div>
-      <div class="buy">
-        <div class="price">Status<strong>Open</strong></div>
-        <a class="btn" href="https://www.atom.com/domain-auctions/innmoon.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+    </article>
+
+    <article class="card">
+      <div class="band">
+        <div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M13 5v6M19 5v6" stroke="#1556d6" stroke-width="2.4" stroke-linecap="round"/><rect x="8" y="11" width="16" height="9" rx="3" fill="#1556d6"/><path d="M16 20v4a3 3 0 003 3h2" stroke="#1556d6" stroke-width="2.4" stroke-linecap="round"/><circle cx="25" cy="8" r="1.5" fill="#6f9bff"/></svg></div>
+        <div class="title">
+          <h2>FancyPlugin.com</h2>
+          <p>Plug in style. Launch in seconds.</p>
+        </div>
+        <span class="open">Open for Bids</span>
+      </div>
+      <div class="body">
+        <div class="stats">
+          <div><small>Current Bid</small><b class="hl">$10</b></div>
+          <div><small>ATOM AI Appraisal</small><b class="gold">$1,599</b></div>
+          <div><small>Total Bids</small><b>1</b></div>
+          <div><small>Auction Ends</small><b class="sm">Nov 24, 1:00 PM</b></div>
+        </div>
+        <div class="act">
+          <div class="tags"><span>No Reserve</span><span>.com</span><span>Instant ATOM Transfer</span></div>
+          <a class="btn" href="https://www.atom.com/domain-auctions/fancyplugin.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="band">
+        <div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M20 5a11 11 0 100 22 9 9 0 01-9-11 9 9 0 019-11z" fill="#1556d6"/><circle cx="25" cy="8" r="1.4" fill="#6f9bff"/><circle cx="27" cy="15" r="1" fill="#6f9bff"/></svg></div>
+        <div class="title">
+          <h2>InnMoon.com</h2>
+          <p>A stay worth dreaming about.</p>
+        </div>
+        <span class="open">Open for Bids</span>
+      </div>
+      <div class="body">
+        <div class="stats">
+          <div><small>Starting Bid</small><b class="hl">$10</b></div>
+          <div><small>ATOM AI Appraisal</small><b class="gold">$1,899</b></div>
+          <div><small>Total Bids</small><b>0</b></div>
+          <div><small>Auction Ends</small><b class="sm">Nov 24, 1:00 PM</b></div>
+        </div>
+        <div class="act">
+          <div class="tags"><span>No Reserve</span><span>.com</span><span>Instant ATOM Transfer</span></div>
+          <a class="btn" href="https://www.atom.com/domain-auctions/innmoon.com#src=internal_search" target="_blank" rel="noopener">Bid Now</a>
+        </div>
       </div>
     </article>
 
   </div>
+  <p class="note">Bids and appraisals as listed on ATOM on Nov 21, 2026. Appraisal values are ATOM AI estimates, not guaranteed sale prices.</p>
 
-  <section class="how" aria-label="How it works">
-    <div><h3>1. Pick a Domain</h3><p>Choose the name that fits your brand.</p></div>
-    <div><h3>2. Place Your Bid</h3><p>Bid on ATOM. No reserve, no minimum to beat.</p></div>
-    <div><h3>3. Win and Launch</h3><p>Highest bid wins and gets the domain.</p></div>
+  <section class="why">
+    <h2>Why These Names Are Worth Owning</h2>
+    <div class="grid">
+      <div><h3>Easy to Remember</h3><p>Simple, readable names people recall and type correctly.</p></div>
+      <div><h3>Brand Ready</h3><p>Clear meaning that fits a real business or project.</p></div>
+      <div><h3>.com Authority</h3><p>The extension customers trust most.</p></div>
+      <div><h3>No Reserve</h3><p>Every bid counts. The highest bidder wins.</p></div>
+    </div>
   </section>
 
   <section class="cta">
-    <h2>Don’t Let a Great Name Slip Away</h2>
-    <p>Three auctions end soon. Bid before the timer runs out.</p>
+    <h2>Secure Your Domain Before the Timer Ends</h2>
+    <p>Three auctions end tomorrow. Place your bid on ATOM today.</p>
     <a class="btn" href="https://www.atom.com/domain-auctions/fruitmuffins.com#src=internal_search" target="_blank" rel="noopener">Start Bidding</a>
   </section>
 </main>
 
-<footer>Auctions hosted on ATOM. Prices and timers shown at time of listing; check ATOM for live bids.</footer>
+<footer>Auctions hosted on ATOM. Check ATOM for live bids and final closing times.</footer>
 
 </body>
 </html>
